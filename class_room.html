@@ -409,32 +409,141 @@
                   </div>
                </div>
                <div class="col-xl-7">
-                  <div class="task1PopupMainOption">
-                     <button id="start" class="CameraOption">
-                        <img src="asset/img/icon/camer_1.png" alt="">
-                        <h3>CAMERA</h3>
-                     </button>
-                     <button id="download" disabled>
-                        <img src="asset/img/icon/upload.png" alt="">
-                        <h3>UPLOAD</h3>
-                     </button>
-                  </div>
-                  <div class="openCamerapopUpnotificatio">
-
-                     <video id="gum" playsinline autoplay muted></video>
-                     <!-- <video id="recorded" playsinline loop></video> -->
+                  <div class="task1PopupMainVideoArea">
+                     
 
 
+                     <div class="task1PopupMainOption">
+                        <button id="start" class="CameraOpen">
+                           <img src="asset/img/icon/camer_1.png" alt="">
+                           <h3>CAMERA</h3>
+                        </button>
+                        <button id="download" disabled>
+                        
+                        </button>
+                        <button class="UploadBtn">
+                           <img src="asset/img/icon/upload.png" alt="">
+                           <h3>UPLOAD</h3>
+                        </button>
+                     </div>
 
-                     <button id="record" disabled>Start Recording</button>
-                     <button id="play" disabled>Play</button>
-                     <div>
-                        <p style="display: none;">Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
-                    </div>
-                
-                    <div>
-                        <span id="errorMsg"></span>
-                    </div>
+
+
+                     <!-- this is for video capter main area -->
+                     <div id="videoCapterMain">
+                        <!-- this is camera area top -->
+                        <div class="videoCapterMainTop">
+                           <audio id="snapshotSound" src="asset/audio/camera.mp3"> </audio>
+                           <p id="result"></p>
+                           <div id="my_camera"></div>
+                           <video id="gum" playsinline autoplay muted></video>
+                           <video id="recorded" playsinline loop></video>
+                           <div class="cameraOpeninformation">
+                              <p>Starting Camera...</p>
+                           </div>
+                        </div>
+                        <!-- end camera area top -->
+                        <!-- this is camera button option -->
+                        <div class="videoCapterMainButton">
+                           <div class="videoCapterMainButtonVideo">
+                              <ul>
+                                 <li id="capterImage" onclick="takeSnapShot()">
+                                    <span></span>
+                                    Capture
+                                 </li>
+                                 <li class="recordBtn">
+                                    <span></span>
+                                    Record
+                                 </li>
+                                 <li class="StopCamere">
+                                    <span>
+                                       <i class="fa fa-times"></i>
+                                    </span>
+                                    Cancel
+                                 </li>
+                              </ul>
+                              <div >
+                                 <button style="display: none;" id="record" disabled>Start Recording</button>
+                                 <button style="display: none;" id="play" disabled>Play</button>
+                                 <button style="display: none;" id="download" disabled>Download</button>
+                             </div>
+                              <div>
+                                 <p style="display: none;">Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
+                             </div>
+                         
+                             <div>
+                                 <span id="errorMsg"></span>
+                             </div>
+                           </div>
+                           <div class="takeaSnapshotUploadBtn">
+                              <ul>
+                                 <li class="success" id="SnapUploadBtn">
+                                    <span>
+                                       <i class="fa fa-check"></i>
+                                    </span>
+                                    YES
+                                 </li>
+                                 <li class="no" id="DeletCapter">
+                                    <span>
+                                       <i class="fa fa-times"></i>
+                                    </span>
+                                    NO
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <!-- end camera button option -->
+                        <!-- start snapshot upload popup -->
+                        <div id="snapShotUpload">
+                           <div class="snapShotUploadContainer">
+                              <div class="row">
+                                 <div class="col-xl-8">
+                                    <h4 id="SnapShotResult2"> Advika_A1T1_S1_v1.jpeg</h4>
+                                 </div>
+                                 <div class="col-xl-4">
+                                    <a href="#" class="text-center">
+                                       <img class="img-fluid" src="asset/img/icon/feedback.png" alt="">
+                                       <p>VIEW FEEDBACK</p>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="submitRevison">
+                              <img class="img-fluid" src="asset/img/icon/submt.png" alt="">
+                              <p>SUBMIT REVISION</p>
+                           </button>
+                        </div>
+                        <!-- end snapshot upload popup -->
+                        <!-- start snapshot upload approuv -->
+                        <div id="snapShotUploadview">
+                           <div class="snapShotUploadContainer">
+                              <div class="row align-items-center">
+                                 <div class="col-xl-8">
+                                    <h4 id="SnapShotResult3"></h4>
+                                 </div>
+                                 <div class="col-xl-4">
+                                    <p><img class="img-fluid" src="asset/img/icon/approuv.png" alt=""> Approved</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- end snapshot upload approuv -->
+
+
+
+
+
+
+
+
+
+                     </div>
+                     <!-- end video capter main area -->
+
+
+
+
+
                   </div>
                </div>
             </div>
@@ -586,6 +695,7 @@
    <script src="asset/js/webcam/adapter-latest.js"></script>
    <script src="asset/js/webcam/main.js"></script>
    <script src="asset/js/webcam/ga.js"></script>
+   <script src="asset/js/webcam/webcam.min.js"></script>
    <script src="asset/js/webcam.js"></script>
 </body>
 </html>
