@@ -1,0 +1,52 @@
+/* XL (laptop) Device :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+    
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+    
+}
+/* LG Device :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+
+/* MD Device :768px. */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+
+@media (max-width: 767px) {
+}
+
+/*-- Phone Landscape --*/
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+
+
+/* Extra small Device. */
+@media (max-width: 575px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
